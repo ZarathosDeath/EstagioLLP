@@ -1,0 +1,19 @@
+<h5>Login</h5>
+
+<div class="row">
+  <div class="input-field col s12">
+    <input [(ngModel)]="user.email" name="email" type="text" class="validate" style="width: 400px">
+    <label class="active" for="user">Email</label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="input-field col s12">
+    <input [(ngModel)]="user.password" name="password" type="password" class="validate" style="width: 400px" data-length="10">
+    <label class="active" for="password">Senha</label>
+  </div>
+</div>
+
+<button class="btn waves-effect waves-light" type="submit" name="action" (click)="UserLogin()" >Login
+  <i class="material-icons right">send</i>
+</button>
