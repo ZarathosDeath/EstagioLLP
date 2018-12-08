@@ -17,6 +17,8 @@ export class AuthService {
 
   ShowDashboardEmitter = new EventEmitter<boolean>();
 
+  user1 = new User();
+
   constructor(private router: Router,private http: HttpClient ,@Inject(LOCAL_STORAGE) private storage: WebStorageService) { }
 
   UserLogin(user: User){
@@ -46,6 +48,7 @@ export class AuthService {
 
   logOut(){
     localStorage.removeItem('loggedIn');
+    this.UserLogin(this.user1);
   }
 
   getToken(){
